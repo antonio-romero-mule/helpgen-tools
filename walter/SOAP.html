@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>SOAP Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">SOAP Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Publish a SOAP web service via JAX-WS annotations, WSDL, or CXF Simple Service using Apache CXF.
+</p>
+<p>
+<b>Discussion:</b><br />
+	A SOAP component publishes a SOAP web service via JAX-WS annotations, WSDL, or CSF Simple Service. It uses Apache CSF.</p>
+
+<p>Generally, you add a SOAP component to an endpoint. If you add the SOAP component to a request-response endpoint, such as an HTTP endpoint, Mule Studio generates a SOAP request-response component, as shown below.</p>
+<img src="../images/SOAP-twoway.png" alt="" border="0">
+<p>If you add the SOAP component to a one-way endpoint, such as a File endpoint, then Mule Studio generates a SOAP one-way component. See below.</p>
+<img src="../images/SOAP-oneway.png" alt="" border="0">
+<p>Configuring SOAP attributes is optional. If you do want to change any attributes, double-click the SOAP icon on the canvas to open the Pattern Properties dialog. Use the General tab to specify any generic and inbound attributes for the SOAP component.</p>
+<img src="../images/SOAP-props1.png" alt="" width="300" border="0">
+<p>Use the Advanced tab to optionally configure other common configurations (such as enabling Mule SOAP headers), attributes (such as enabling MTOM), and schema locations.</p>
+<p><img src="../images/SOAP-props2.png" alt="" width="300" border="0">
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/SOAP+Reference" target="_blank">SOAP Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STDIO/Configuring+Components+in+Mule+Studio" target="_blank">Configuring Components in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Configuring+Components" target="_blank">Configuring Components</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/CXF+Module+Configuration+Reference" target="_blank">CXF Module Configuration Reference</a><br />
+</p>
+
+</body>
+</html>

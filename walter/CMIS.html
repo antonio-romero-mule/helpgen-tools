@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>CMIS Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">CMIS Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	The CMIS Cloud Connector enables a Mule application to interact with any Content Management System (CMS) repository that implements the Content Management Interoperability Services (CMIS) specification.
+</p>
+<p>
+<b>Discussion:</b><br />
+	You must have created a Mule Studio global element for the CMIS cloud connector. You can do so from the Global Element pane prior to dropping the CMIS Cloud Connector on the canvas. Or, you can create the global element from within a CMIS Pattern Properties dialog, when setting the config reference property.</p>
+
+<p>Set the Config Reference and Operation properties from the General tab in the Pattern Properties dialog:</p>
+<img src="../images/cmis1.png" alt="" width="300" border="0">
+<ul>
+<li>Select the CMIS global element for the configuration reference from the Config Reference pull-down list. If you have not yet created a CMIS global element, click the Add button to do so. (See CMIS Global Element.)</li>
+<li>Select a CMIS operation from the Operation pull-down list. Operations correspond to the available CMIS APIs.</li>
+</ul>
+
+<p>After you select an operation, the bottom half of the screen displays the properties that can be set for the selected operation. (See the figure below.)</p>
+<img src="../images/cmis2.png" alt="" width="300" border="0">
+<p>Properties marked with a red x are required and other properties are optional. For example, if you select Query for the operation, the Pattern Properties pane displays the query-related properties for this operation, including:</p>
+<ul>
+<li>Statement</li>
+<li>Search all versions</li>
+<li>Filter</li>
+<li>Order by</li>
+</ul>
+<p>Where it can do so, Mule Studio provides property default values. You can change any such default value. Notice that the query Statement is marked with a red x indicating it is required.</p><h1 class="topictitle1">CMIS Global Element</h1>
+
+<p>Click the Add button next to the Config reference field in the Pattern Properties dialog to create a CMIS global element. (You can also do this from the Global Elements pane.) If you have selected a CMIS global element from the Config reference pull-down list, you can click the Edit button to modify configuration values in that global element.</p>
+<img src="../images/cmis-ge.png" alt="" width="300" border="0">
+<p>You enter the CMIS authentication (username and password) and repository connection (repository id and base URL) information in the global element properties. The authentication and connection properties must be configured.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/CMIS+Reference" target="_blank">CMIS Cloud Connector</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Cloud+Connectors+in+Mule+Studio" target="_blank">Configuring Cloud Connectors in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/http://mulesoft.github.com/cmis-connector/mule/cmis.html" target="_blank">Mule CMIS Connector Reference</a><br />
+</p>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Message Property Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Message Property Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Matches properties on a message.
+</p>
+<p>
+<b>Discussion:</b><br />
+	Use a Message Property Filter to route messages using logic based on the values of one or more message properties. Using this filter you can access the message meta-data (that is, the message properties) including transport-specific and user-defined properties. These message properties represent all the meta information about the message that is available from the underlying transport. For example, if you receive a message via a HTTP endpoint, you can use this filter to check HTTP header values.</p>
+
+<p>The Pattern is expressed as a key/value pair, where the key is the name of the property.</p>
+
+<p>By default, the Case Sensitive box is checked, indicating that the comparison is case sensitive. Uncheck this box if you want the comparison to be case insensitive.</p>
+
+<p>You can also limit the filter to the scope of the message. Scope can be inbound, invocation, outbound, session, or application. The default scope is outbound. For more information, see <a href="http://www.mulesoft.org/documentation/display/MULE3USER/Message+Property+Scopes" target="_blank">Message Property Scopes</a>.</p><p>For more information on using a Message Property Filter, see <a href="http://www.mulesoft.org/documentation/display/MULE3USER/Using+Filters#UsingFilters-MessagePropertyFilter" target="_blank">http://www.mulesoft.org/documentation/display/MULE3USER/Using+Filters#UsingFilters-MessagePropertyFilter</a>.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Message+Property+Filter" target="_blank">Message Property Filter Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Filters+in+Mule+Studio" target="_blank">Configuring Filters in Mule Studio</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Filters+Configuration+Reference#FiltersConfigurationReference-Messagepropertyfilter" target="_blank">Message Property Filter Reference</a><br />
+</p>
+
+</body>
+</html>

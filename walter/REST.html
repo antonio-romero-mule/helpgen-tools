@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>REST Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">REST Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Use a REST API to publish an external RESTful web service.
+</p>
+<p>
+<b>Discussion:</b><br />
+	<p>A REST component publishes a RESTful web service via JAX-RS annotations and using Jersey. In addition to specifying the REST component class, you can also configure an exception mapper and a interceptor.</p>
+
+<p>Note that REST is a formal HTTP architecture based on resources, links, and a uniform interface. As such, it uses the HTTP protocol.</p>
+
+<p>Mule hosts RESTful web services using Jersey, which is a JAX-RS (JSR-311) implementation. JAX-RS is a specification that provides a series of annotations and classes that make it possible to build RESTful services.</p>
+
+<p>Generally, you add a REST component to an endpoint. If you add the REST component to a request-response endpoint, such as an HTTP endpoint, Mule Studio generates a REST request-response component, as shown below.</p>
+<img src="../images/REST-twoway.png" alt="" border="0">
+<p>If you add the REST component to a one-way endpoint, such as a File endpoint, then Mule Studio generates a REST one-way component. See below.</p>
+<img src="../images/REST-oneway.png" alt="" order="0">
+<p>Double-click the REST icon on the canvas to open the Pattern Properties dialog. Use the General tab to specify the reference to the REST component or resource and, if you are using exception mapping, the class implementing this mapping.</p>
+
+<p>Use the Advanced tab to specify a reference to an interceptor. When you add a new interceptor, use the pull-down menu to specify whether this is a custom interceptor, a logging interceptor, or a timer interceptor.</p>
+<p>
+<img src="../images/REST-props1.png" alt="" width="300" border="0">
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/REST+Reference" target="_blank">REST Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STDIO/Configuring+Components+in+Mule+Studio" target="_blank">Configuring Components in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Configuring+Components" target="_blank">Configuring Components</a><br />
+</p>
+
+</body>
+</html>

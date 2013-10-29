@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Expression Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Expression Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Executes one or more expressions on the current message. The results of these expressions becomes the payload of the current message.
+</p>
+<p>
+<b>Discussion:</b><br />
+	An Expression Transformer evaluates one or more expressions on the current message. Each evaluated expression equates to a parameter in the returned message. However, if the returned message encompasses more than one expression, then the results of those expressions are an Object array.</p>
+
+The Expression Transformer has the same advanced properties as all other transformers with the addition of an optional list of return arguments. See <a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio" target="_blank">http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio</a> to configure the standard advanced properties.
+
+<p>Click the General tab to specify an expression and an expression evaluator in the Expression attributes section.</p>
+<img src="../images/expression-transformer1.png" alt="" width="300" border="0">
+
+<p>You can select the expression evaluator from the pull-down list, or enter your own custom evaluator value. The expression evaluators in the pull-down list are already registered. If you set Evaluator to custom, you also need to specify the custom evaluator. In addition, when using a custom expression evaluator, you must first have registered the custom evaluator with the <strong>ExpressionEvaluatorManager</strong>. Note that the syntax of expressions you use vary depending on the evaluator.
+</p>
+<p>Check the Return source if Null box if you want the message payload source to be returned without modification when all expressions evaluate to null.</p>
+
+<p>Use the Advanced tab to optionally configure the properties standard to all transformers and to specify the return arguments.</p>
+<img src="../images/expression-transformer2.png" alt="" width="300" border="0">
+<p>Click the plus sign icon in the Return arguments pane to enter expressions for return arguments.</p>
+
+<p>For each return argument, you enter or select from the pull-down list its expression evaluator. Then enter the expression to use. If you set Evaluator to custom, you also need to specify the custom evaluator. If you are using a custom expression evaluator, you must first have registered the custom evaluator with the <strong>ExpressionEvaluatorManager</strong>. Expression syntax varies depending on the evaluator.</p>
+
+<p>When you have multiple expressions for return arguments, by default expression evaluation returns an error and stops when an expression evaluates to null. Check the Optional box if you want expression evaluation to continue to the next expression when an expression evaluates to null.</p>
+
+<p>For more information about using expressions, see <a href="http://www.mulesoft.org/documentation/display/MULE3USER/Using+Expressions" target="_blank">http://www.mulesoft.org/documentation/display/MULE3USER/Using+Expressions</a>.</p>
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Expression+Transformer" target="_blank">Expression Transformer Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio" target="_blank">Configuring Transformers in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Expressions+Configuration+Reference" target="_blank">Expression Transformer Reference</a><br />
+</p>
+
+</body>
+</html>

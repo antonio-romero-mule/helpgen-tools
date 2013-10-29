@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>File Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">File Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	The File Endpoint enables reading and writing message data to and from a file system. 
+</p>
+<p>
+<b>Discussion:</b><br />
+	When File Endpoint is used to receive data (as an inbound endpoint), you can read the data in files from the file system. You can also use File Endpoint to move backup files to a specific directory or folder.
+</p>
+<p>When you read data from a file located on the file system through an Inbound File Endpoint, that file is deleted after it is read. You can keep a copy of the file after it is read by setting the Move to directory property to a location where you want the copy placed. You can also specify the Move to pattern property to change the file name when it is moved.</p>
+<ul>
+<li>Reading Large Files: If you anticipate reading a file containing a large amount of data, you may want to set an amount of time that Mule ESB should wait before reading and processing the file. Having Mule wait before processing ensures that all data is written to the file. Use the File age property to set this wait time (in milliseconds).</li>
+<li>Sorting Files: You can also control the sort order in which the File Endpoint reads files. To do so, set the Comparator property to a Java comparator class that specifies how to sort incoming files. You can use any of the comparator classes provided by Mule, for example: org.mule.transport.file.comparator.OlderFirstComparator. If you write your own Java comparator class, be sure that the class implements the java.util.Comparator interface. When sorting incoming files, you can also reverse the sort order by checking the Reverse order property.</li>
+</ul>
+<p>For an Outbound File Endpoint you set just two path-related properties: The path to the output file folder or directory location and a pattern to apply to the output file name. If you don't specify an output pattern, the output file has the same name as the input file. 
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/File+Endpoint+Reference" target="_blank">File Endpoint Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Endpoints+in+Mule+Studio" target="_blank">Configuring Endpoints in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Tutorials:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Getting+Started+with+Mule+Studio" target="_blank">Getting Started with Mule Studio</a><br />
+</p>
+
+</body>
+</html>

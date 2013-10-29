@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Twitter Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Twitter Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	The Twitter Cloud Connector enables a Mule application to access the Twitter social networking APIs.
+</p>
+<p>
+<b>Discussion:</b><br />
+	You must first set up an account on Twitter, which you do through the Twitter web site, and register your application. You need to do this to obtain the required authorization (Oauth) and consumer keys that you enter when creating the Twitter global element or configuring the Twitter cloud component. These authorization keys are specific to a user.</p>
+
+    * For details on setting up a Twitter account, see the Twitter sign up page.
+    * After you set up a Twitter account, you must register the new application with Twitter. Click here to register the application.
+
+<p>Once you complete the Twitter account set-up and registration, you should have the following pieces of information needed to complete the configuration of the Twitter global element:</p>
+<ul>
+<li>Oauth Token: oauthToken</li>
+<li>Oaugh Token Secret: oauthTokenSecret</li>
+<li>Consumer Key: consumerKey</li>
+<li>Consumer Secret: consumerSecret</li>
+</ul>
+<p>You also must create a Mule Studio global element for the Twitter cloud connector. You can do so from the Global Element pane prior to dropping the Twitter Cloud Connector on the canvas. You can also do this from within the Twitter Pattern Properties dialog when configuring the cloud connector.</p>
+
+<p>Note that the authorization keys (oauthToken and oauthTokenSecret) are only required if your application updates or sends information. There is no need for these two authorization credentials if your application only searches for Twitter posts and does not perform any logging operations. Applications performing only search operations as well as those that perform logging operations do need to configure the consumerKey and consumerSecret properties.</p>
+
+<p>Configure Twitter properties from the General tab in the Twitter Pattern Properties dialog:</p>
+<img src="../images/twitter1.png" alt="" border="0" width="300">
+<p>Select the Operation from the Operation property pull-down list. The configurable properties shown at the bottom of the pane change depending on the operation you select. For example, if you select the operation Update status, then you enter the expected Status property, as shown above.</p>
+
+<p>The figure below shows the same properties dialog when you select the Search operation.</p>
+<img src="../images/twitter-dialog2.png" alt="" border="0" width="300">
+<p>Notice that you can enter a number of search parameters, of which the search Query is required.</p>
+
+<p>The section below covers the different configurable properties for each type of operation.</p>
+
+<p>For Config reference, select the Twitter global element from the field's pull-down list. Use the Add or Edit buttons to add or edit a global element.</p>
+
+<p>In the Authentication section, enter the consumerKey and consumerSecret values supplied by Twitter in the respective Consumer Key and Consumer Secret fields. You may have set these values in the Twitter global element. If so, you can leave them blank here and use the values from the Twitter global element, or you can enter new values here and thus change them for this particular Twitter instance.</p>
+
+<h1 class="topictitle1">Twitter Global Element</h1>
+<p>Click the Add button next to the Config reference field in the Pattern Properties dialog to create a Twitter global element. (You can also do this from the Global Elements pane.) If you have selected a Twitter global element from the Config reference pull-down list, you can click the Edit button to modify configuration values in that global element.</p>
+<img src="../images/twitter-ge.png" alt="" border="0" width="300">
+<ul>
+<li>Under the Twitter Configuration tab, select the data format for exchanging data with Twitter.</li>
+<li>In the Authentication section, do the following:</li>
+<ul>
+<li>Enter the Oauth Token and Oauth Token Secret values supplied by Twitter. These are required if your application logs data.</li>
+<li>Enter the Consumer Key and Consumer Secret values supplied by Twitter. These are required for applications that log data or merely perform searches.</li>
+</ul>
+</ul>
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Twitter+Reference" target="_blank">Twitter Cloud Connector</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Cloud+Connectors+in+Mule+Studio" target="_blank">Configuring Cloud Connectors in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/http://mulesoft.github.com/cmis-connector/mule/cmis.html" target="_blank">Mule CMIS Connector Reference</a><br />
+</p>
+
+</body>
+</html>

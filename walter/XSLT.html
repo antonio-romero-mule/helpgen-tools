@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>XSLT Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">XSLT Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Use a XSLT Transformer to transform XML data using XSLT.
+</p>
+<p>
+<b>Discussion:</b><br />
+	A XSLT transformer, unless configured otherwise, transforms XML data based on the default XSL template file.</p>
+
+<p>Use the General tab to specify the XSL transformation code.</p>
+<img src="../images/xslt1.png" alt="" width="300" border="0">
+<p>From the General tab, you can specify a different XSL template file. You can browse to this file or enter the full path to the file. Rather than specifying a XSL file, you can type in the XSL content directly in the XSLT Content box. Either way that you specify the XSLT, you can also select the Output Encoding, such as the ISO Unicode or language formats, for the content output from the XML.</p>
+
+<p>Use the Advanced tab to optionally configure additional properties.</p>
+<img src="../images/xslt2.png" alt="" width="300" border="0">
+<p>In addition to encoding options, you can specify the URI resolver. You specify the URI resolver to use if you want to change how the XSL output is validated. If not set, Mule uses a default resolver that checks for resources on the local file system and classpath.</p>
+
+<p>You can also optionally set a Transformer Factory. If set, this is the fully qualified class name of the <strong>javax.xml.TransformerFactory</strong> instance to use. If not specified, Mule uses the default JDK factory <strong>TransformerFactory.newInstance()</strong>.</p>
+
+<p>You can also set Max Idle and Max Active values for the transformers pool. Because XSL transformation is expensive, and because Mule pools transformers for better throughput, you may want to set limits on the transformer pool when using XSLT transformers. Use Max Idle to set the maximum number of transformer instances that remain idle in the pool. Use Max Active to set the maximum number of XSLT transformers that are pooled at any given time. The default value for Max Idle is 2 and the default value for Max Active is 5.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/XSLT+Transformer+Reference" target="_blank">XSLT Transformer Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio" target="_blank">Configuring Transformers in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/XSLT+Transformer" target="_blank">XSLT Transformer Reference</a><br />
+</p>
+
+<p>
+<b>Related Tutorials:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Mid-Level+Mule+Studio+Tutorial" target="_blank">Mid-Level Tutorial – An Enhanced Spell Checker Using Google APIs and Ajax</a><br />
+</p>
+
+</body>
+</html>

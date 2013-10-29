@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Splitter Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Splitter Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Using an expression, splits a message into separate fragments and then sends these fragments to the next message processor.
+</p>
+<p>
+<b>Discussion:</b><br />
+	Use the Splitter Flow Control to split a message into two or more parts based on an expression. After the message is split, Mule sends all message pieces to the next message processor in the flow.</p>
+
+<p>To configure a Splitter, double-click its icon on the canvas and, in the Pattern Properties dialog, click the Splitter Properties tab.</p>
+<img src="../images/splitter1.png" alt="" border="0">
+<p>Select the language of the expression from the Evaluator property pull-down list. Mule provides standard expression evaluators for json, ognl, xpath, jxpath, and groovy. If you have a custom evaluator and have registered it, that evaluator also appears in the list.</p>
+
+<p>Enter the expression in the Expression property field.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Splitter+Reference" target="_blank">Splitter Flow Control Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Configuring+Flow+Control+in+Mule+Studio" target="_blank">Configuring Flow Control in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Routing+Message+Processors#RoutingMessageProcessors-Splitter" target="_blank">Splitter Flow Control Reference</a><br />
+</p>
+
+</body>
+</html>

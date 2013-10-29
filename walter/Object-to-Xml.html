@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Object-to-Xml Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Object-to-Xml Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Use a Object-to-XML transformer to transform a Java Object to XML data using XStream.
+</p>
+<p>
+<b>Discussion:</b><br />
+	A Object-to-XML transformer transforms Java Object data to XML using the specified XStream driver class.</p>
+
+<p>In addition to the properties common to all transformers, you can also specify class aliases and converters, as well as whether or not to accept the Mule Message.</p>
+
+<p>Use the General tab to specify or browse to the XStream driver class.</p>
+<img src="../images/object-to-xml1.png" alt="" width="300" border="0">
+<p>Check the Accept Mule Message box to have the transformer accept the Mule Message. Accepting the Mule Message means that the transformer serializes the entire Mule Message, not just the message payload. The entire Mule Message includes the payload, message properties, correlation ID, and so forth.</p>
+
+<p>Use the Advanced tab to optionally configure the properties standard to all transformers, plus add or change class aliases and class converters.</p>
+<img src="../images/object-to-xml2.png" alt="" width="300" border="0">
+<p>Use the Aliases pane to create, edit, or delete aliases for specific classes. Similarly, use the Converters pane to create, edit, or delete class converters.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Object+to+XML+Transformer" target="_blank">Object-to-XML Transformer Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio" target="_blank">Configuring Transformers in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/XmlObject+Transformers#XmlObjectTransformers-ObjecttoXML" target="_blank">Object-to-XML transformer Reference</a><br />
+</p>
+
+<p>
+<b>Related Tutorials:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Mid-Level+Mule+Studio+Tutorial" target="_blank">Mid-Level Tutorial – An Enhanced Spell Checker Using Google APIs and Ajax</a><br />
+</p>
+
+</body>
+</html>

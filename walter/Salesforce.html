@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Salesforce Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Salesforce Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	The Salesforce Cloud Connector allows your Mule application to access the Salesforce CRM application APIs.
+</p>
+<p>
+<b>Discussion:</b><br />
+	To access the Salesforce APIs, you must create a developer account with salesforce.com. Sign up for an account at http://developer.force.com/ to create an account and get a user name, password, and security token.</p>
+
+<p>You also must have created a Mule Studio global element for the Salesforce cloud connector. You can do so from the Global Element pane prior to dropping the Salesforce Cloud Connector on the canvas. Or, you can create the global element from within a Salesforce Pattern Properties dialog, when setting the config reference property.</p>
+
+<p>Set the Config Reference and Operation properties from the General tab in the Salesforce Pattern Properties dialog:</p>
+<img src="../images/salesforce1.png" alt="" border="0" width="300">
+    * Select the Salesforce global element for the configuration reference from the Config Reference pull-down list. If you have not yet created a Salesforce global element, click the Add button to create this element. (See <a href="http://www.mulesoft.org/documentation/display/MULE32USER/Salesforce+Reference#SalesforceReference-SalesforceGlobalElement" target="_blank">Salesforce Global Element</a>.)
+    * Select a Salesforce operation from the Operation pull-down list. Operations correspond to the available Salesforce APIs.
+
+<p>After you select an operation, the bottom half of the screen displays the properties that you set for the selected operation. (See the figure below.)</p>
+<img src="../images/salesforce2.png" alt="" border="0" width="300">
+<p>Properties marked with a red x are required and others are optional. For example, if you select Get Deleted Range for the operation, the Pattern Properties pane displays the properties for this operation, including:</p>
+<ul>
+<li>Type</li>
+<li>Start Time</li>
+<li>Stop Time</li>
+</ul>
+<p>Mule Studio provides a default value, order, for the Type property. Whenever possible, Mule Studio provides default property values. You can change any such default value. Notice that both Start Time and Stop Time, the delimiters for the date range, are required. Times are entered using UTC format, such as: 12:45:15, for hour, minute, and second. Note that the API uses only the hour and minute fields for the time.</p>
+
+<p>When you select the Create operation, you use the Advanced tab to add and edit sObjects. The figure below illustrates these steps.</p>
+<img src="../images/salesforce3.png" alt="" border="0" width="300">
+<p>Click the plus icon <img src="../images/plus-icon.png" alt="" border="0"> to add a new salesforce sObject. Select that object, then click the edit icon <img src="../images/edit-icon.png" alt="" border="0"> to add key/value pairs and value references for the object. Click the red x icon <img src="../images/delete-icon.png" alt="" border="0"> to delete a sObject or to delete a key/value pair.</p>
+
+<h1 class="topictitle1">Salesforce Global Element</h1>
+
+<p>Click the Add button next to the Config reference field in the Pattern Properties dialog to create a Salesforce global element. (You can also do this from the Global Elements pane.) If you have selected a Salesforce global element from the Config reference pull-down list, you can click the Edit button to modify configuration values in that global element.</p>
+<img src="../images/salesforce-ge.png" alt="" border="0" width="300">
+<p>You enter the Salesforce authentication information for the global element properties.</p>
+
+<ul>
+<li>Name: The name of the global element. Mule Studio provides a default name which you can change.</li>
+<li>Username: The user name for your salesforce.com account.</li>
+<li>Password: The password for your salesforce.com account.</li>
+<li>Security token: The security token provided to you by salesforce.com.</li>
+</ul>
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Salesforce Cloud Connector" target="_blank">Salesforce Cloud Connector</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Cloud+Connectors+in+Mule+Studio" target="_blank">Configuring Cloud Connectors in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/http://mulesoft.github.com/cmis-connector/mule/cmis.html" target="_blank">Mule CMIS Connector Reference</a><br />
+</p>
+
+</body>
+</html>

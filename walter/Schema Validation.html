@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Schema Validation Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Schema Validation Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Validates a message against a schema.
+</p>
+<p>
+<b>Discussion:</b><br />
+	The Schema Validation Filter uses the JAXP libraries to validate a message against a schema. You must provide the location of the schema or schemas in the Schema Locations property.
+</p>
+<p>Optionally, you can set Schema Language to the schema language to use. If not specified, the property defaults to <em>http://www.w3org/2001/XML Schema</em>.</p>
+
+<p>By default, the Return result box is checked, which caches the result of the XML validation and allows you to read the XML again. If unchecked and set to false, the filter runs more efficiently but does not cache the XML and you cannot read the XML a second time.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Schema+Validation+Filter" target="_blank">Schema Validation Filter Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Filters+in+Mule+Studio" target="_blank">Configuring Filters in Mule Studio</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Filters+Configuration+Reference#FiltersConfigurationReference-Schemavalidationfilter" target="_blank">Schema Validation Filter Reference</a><br />
+</p>
+
+</body>
+</html>

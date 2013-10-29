@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Choice Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Choice Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Using an expression, sends a message to the first message processor that matches the expression criteria.
+</p>
+<p>
+<b>Discussion:</b><br />
+	Use the Choice Flow Control to evaluate an incoming message according to an associated expression. Mule sends the message to the first message processor that matches the expression criteria. You can think of a Choice Flow Control as a flow control with an Expression component attached to it.</p>
+
+<p>In programming terms, using a Choice flow control adds the equivalent of an if/then/else code block to the flow logic. In the configuration XML, the code for Choice relies on a when attribute and appears as follows:</p>
+
+<pre><choice>
+  <when expression="payload=='foo'" evaluator="groovy">
+    <append-string-transformer message=" Hello foo" />
+  </when>
+  <when expression="payload=='bar'" evaluator="groovy">
+    <append-string-transformer message=" Hello bar" />
+  </when>
+  <otherwise>
+    <append-string-transformer message=" Hello ?" />
+  </otherwise>
+</choice>
+</pre>
+
+<p>To configure a Choice, drop an Expression component on the Choice icon on the canvas. Then, double-click Choice to open its Pattern Properties dialog. Use the Choice Properties tab to view and edit the expression.</p>
+
+<p>For example, the figure below shows the Choice Flow Control on the canvas and an Expression Filter added to Choice.</p>
+<img src="../images/choice1.png" alt="" border="0">
+
+<p>When you open the Pattern Properties dialog, notice that Expression appears in the Choice Properties tab.</p>
+<img src="../images/choice2.png" alt="" border="0" width="400">
+<p>Double-click Expression in the Route column to open the Route Properties dialog through which you set the expression evaluator and expression.</p>
+
+<p>Select the language of the expression from the Evaluator property pull-down list. Mule provides standard expression evaluators, such as ognl, xpath, jxpath, and groovy. If you have a custom evaluator and have registered it, that evaluator also appears in the list.</p>
+
+<p>Enter the expression in the Expression property field.</p>
+
+<p>After you select the evaluator and enter the expression, click OK. The Pattern Properties dialog displays the expression and evaluator in the appropriate columns.
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Choice+Reference" target="_blank">Choice Flow Control Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Configuring+Flow+Control+in+Mule+Studio" target="_blank">Configuring Flow Control in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Routing+Message+Processors#RoutingMessageProcessors-Choice" target="_blank">Choice Flow Control Reference</a><br />
+</p>
+
+</body>
+</html>

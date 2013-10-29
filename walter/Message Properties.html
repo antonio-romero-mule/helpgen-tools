@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta content="Copyright (c) 2011 MuleSoft Inc. All rights reserved." name="copyright"/>
+	<link href="../../../org.eclipse.wst.doc.user/common.css" rel="stylesheet" type="text/css"/>
+	<link href="../stylesheet/helptopics.css" rel="stylesheet" type="text/css"/>
+	<title>Message Properties Reference</title>
+</head>
+<body>
+<h1 class="topictitle1">Message Properties Reference</h1>
+
+<p>
+<b>Purpose:</b><br />
+	Add, delete, or rename message properties.
+</p>
+<p>
+<b>Discussion:</b><br />
+	A Message Properties Transformer lets you add, rename, or delete message properties. You can apply the operation to a particular message scope, such as invocation (or inbound) or outbound scope. If you want to delete message properties for a scope, you must identify the property by its key.</p>
+
+<p>The Message Properties Transformer has the same advanced properties as other transformers. See <a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio" target="_blank">http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio</a> to configure these optional properties.</p>
+<img src="../images/message-properties-transformer.png" alt="" width="300" border="0">
+<p>Click the General tab and set the Scope property by selecting an option from its pull-down menu. Message scope can be invocation (inbound), outbound, session, or application. Click the Overwrite box to set this property to true. If true, then adding a new message property overwrites an existing message property with the same name. If false (not checked) then you cannot overwrite an existing message property that has the same name as the new property.</p>
+
+<p>Use the Advanced tab to optionally configure the properties standard to all transformers.</p>
+
+<p>For more information about message properties and message scope, see <a href="http://www.mulesoft.org/documentation/display/MULE3USER/Message+Property+Scopes" target="_blank">http://www.mulesoft.org/documentation/display/MULE3USER/Message+Property+Scopes</a>.</p>
+</p>
+
+<p>
+<b>Related Mule Studio Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Message+Properties+Transformer" target="_blank">Message Properties Transformer Reference</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Global+Mule+Elements" target="_blank">Configuring Global Mule Elements</a><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3STUDIO/Configuring+Transformers+in+Mule+Studio" target="_blank">Configuring Transformers in Mule Studio</a><br />
+</p>
+
+<p>
+<b>Related Mule ESB Documentation:</b><br />
+<a href="http://www.mulesoft.org/documentation/display/MULE3USER/Transformers+Configuration+Reference#TransformersConfigurationReference-Messagepropertiestransformer" target="_blank">Message Properties Transformer Reference</a><br />
+</p>
+
+</body>
+</html>
